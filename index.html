@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Ferza Er - Bilgisayar mühendisliği öğrencisi. Gömülü sistemler, yapay zeka, veri bilimi ve ağ teknolojileri portfolyosu."
+    />
+    <title>Ferza Er | Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-shape shape-one"></div>
+    <div class="bg-shape shape-two"></div>
+
+    <header class="site-header">
+      <nav class="nav" aria-label="Ana navigasyon">
+        <a class="brand" href="#top">Ferza Er</a>
+        <button class="menu-toggle" type="button" aria-label="Menüyü aç" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-links">
+          <a href="#about">Hakkımda</a>
+          <a href="#projects">Projeler</a>
+          <a href="#skills">Yetenekler</a>
+          <a href="#experience">Deneyim</a>
+          <a href="#contact">İletişim</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section">
+        <div class="hero-content">
+          <p class="eyebrow">Bilgisayar Mühendisliği Öğrencisi</p>
+          <h1>Ferza Er</h1>
+          <p class="hero-copy">
+            Gömülü sistemler, yapay zeka, veri bilimi ve ağ teknolojileri alanlarına odaklanan
+            bilgisayar mühendisliği öğrencisiyim. Staj ve proje fırsatları için teknik
+            çalışmalarımı burada topluyorum.
+          </p>
+          <div class="interest-row" aria-label="İlgi alanları">
+            <span>Gömülü Sistemler</span>
+            <span>Yapay Zeka</span>
+            <span>Veri Bilimi</span>
+            <span>Ağ Teknolojileri</span>
+          </div>
+          <div class="hero-actions">
+            <a class="button primary" href="assets/FERZA-ER-CV.pdf" download>CV İndir</a>
+            <a class="button secondary" href="https://github.com/Erferza" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="3D code visual">
+          <div class="laptop">
+            <div class="screen">
+              <div class="window-bar">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <pre><code>const odak = [
+  "gomulu-sistem",
+  "yapay-zeka",
+  "ag-guvenligi"
+];
+
+model.anomaliTespitEt(veri);</code></pre>
+            </div>
+            <div class="keyboard"></div>
+          </div>
+          <div class="float-card card-ai">Yapay Zeka<br /><strong>Risk Analizi</strong></div>
+          <div class="float-card card-embedded">ESP8266<br /><strong>Sensör Verisi</strong></div>
+          <div class="float-card card-network">Ağ<br /><strong>VLAN / Linux</strong></div>
+        </div>
+      </section>
+
+      <section class="section about" id="about">
+        <div>
+          <p class="section-kicker">Hakkımda</p>
+          <h2>Kısa, teknik ve staj odaklı profil.</h2>
+        </div>
+        <div class="about-card">
+          <p>
+            Marmara Üniversitesi Bilgisayar Mühendisliği öğrencisiyim ve 2023-2027 döneminde
+            eğitimime devam ediyorum. Yapay zeka, gömülü sistemler, veri bilimi, siber güvenlik
+            ve ağ teknolojileriyle ilgileniyorum.
+          </p>
+          <p>
+            Staj arayışımda özellikle yazılım geliştirme, gömülü sistemler, yapay zeka/veri
+            bilimi ve ağ/siber güvenlik alanlarında kendimi geliştirebileceğim teknik ekiplerle
+            çalışmayı hedefliyorum.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="section-heading">
+          <p class="section-kicker">Projeler</p>
+          <h2>Öne çıkan çalışmalar</h2>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card featured">
+            <div class="project-topline">
+              <span class="tag">TÜBİTAK 2209-A</span>
+              <span class="tag muted">Kod Özel</span>
+            </div>
+            <h3>Ses Steganografisinde Payload Tespiti</h3>
+            <p class="project-summary">
+              Ses dosyalarında steganografik gizli veri tespiti için CNN tabanlı hiyerarşik
+              sınıflandırma yaklaşımı geliştirildi.
+            </p>
+            <dl class="project-details">
+              <div><dt>Sorun</dt><dd>Ses içine gizlenen veri örüntülerini tespit etmek.</dd></div>
+              <div><dt>Çözüm</dt><dd>Veri ön işleme ve CNN tabanlı sınıflandırma akışı kurmak.</dd></div>
+              <div><dt>Rolüm</dt><dd>Veri hazırlama, model eğitimi, performans analizi ve raporlama.</dd></div>
+              <div><dt>Sonuç</dt><dd>TÜBİTAK 2209-A kapsamında kabul alan araştırma projesi.</dd></div>
+            </dl>
+            <div class="stack">Python · CNN · Deep Learning · Signal Processing</div>
+            <div class="project-actions">
+              <span class="button ghost">Kod Özel</span>
+              <a class="button small" href="#contact">Detayları Gör</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-topline">
+              <span class="tag">AI</span>
+              <span class="tag muted">GitHub</span>
+            </div>
+            <h3>Otonom Araçlarda Anomali Tespiti</h3>
+            <p class="project-summary">
+              Otonom araç sistemlerinde anomali tespiti ve güvenli mod karar mekanizması üzerine
+              geliştirilen proje.
+            </p>
+            <dl class="project-details">
+              <div><dt>Sorun</dt><dd>Sensör ve sistem çıktılarında saldırı/risk durumlarını yakalamak.</dd></div>
+              <div><dt>Çözüm</dt><dd>Makine öğrenmesiyle anomali ve güvenli mod sınıflandırması.</dd></div>
+              <div><dt>Rolüm</dt><dd>Model akışı, risk analizi ve proje sunum yapısının geliştirilmesi.</dd></div>
+              <div><dt>Sonuç</dt><dd>Güvenli mod karar mantığını açıklayan açık kaynaklı proje.</dd></div>
+            </dl>
+            <div class="stack">Python · Machine Learning · Anomaly Detection · Simulation</div>
+            <div class="project-actions">
+              <a class="button ghost" href="https://github.com/Erferza/Otonom-Arac-Guvenligi" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="button small" href="https://github.com/Erferza/Otonom-Arac-Guvenligi" target="_blank" rel="noreferrer">Detayları Gör</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-topline">
+              <span class="tag">Gömülü Linux</span>
+              <span class="tag muted">GitHub</span>
+            </div>
+            <h3>Mini Gömülü Linux Log Sistemi</h3>
+            <p class="project-summary">
+              Gömülü Linux senaryoları için log toplama ve basit izleme mantığını gösteren web
+              arayüzlü çalışma.
+            </p>
+            <dl class="project-details">
+              <div><dt>Sorun</dt><dd>Kısıtlı sistemlerde günlük kayıtlarının okunabilir şekilde takip edilmesi.</dd></div>
+              <div><dt>Çözüm</dt><dd>Mini bir arayüzle log kayıtlarını görselleştirme ve sınıflandırma.</dd></div>
+              <div><dt>Rolüm</dt><dd>Arayüz, sistem fikri ve proje dokümantasyonunun hazırlanması.</dd></div>
+              <div><dt>Sonuç</dt><dd>Gömülü Linux ilgisini gösteren açık GitHub projesi.</dd></div>
+            </dl>
+            <div class="stack">HTML · Linux · Gömülü Sistemler · Günlük Kaydı İzleme</div>
+            <div class="project-actions">
+              <a class="button ghost" href="https://github.com/Erferza/mini-embedded-linux-log-system" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="button small" href="https://github.com/Erferza/mini-embedded-linux-log-system" target="_blank" rel="noreferrer">Detayları Gör</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-topline">
+              <span class="tag">NLP</span>
+              <span class="tag muted">Kod Özel</span>
+            </div>
+            <h3>Söylem Tabanlı Yalan ve Risk Eğilimi Tespiti</h3>
+            <p class="project-summary">
+              Yazılı metinlerde doğruluk ve risk eğilimlerinin tespiti için NLP tabanlı
+              sınıflandırma modelleri karşılaştırıldı.
+            </p>
+            <dl class="project-details">
+              <div><dt>Sorun</dt><dd>Metinlerde yalan ve risk eğilimini otomatik analiz etmek.</dd></div>
+              <div><dt>Çözüm</dt><dd>BERT/RoBERTa, BiLSTM, SVM ve XGBoost ile sınıflandırma.</dd></div>
+              <div><dt>Rolüm</dt><dd>Veri ön işleme, model eğitimi ve sonuç karşılaştırması.</dd></div>
+              <div><dt>Sonuç</dt><dd>Model performanslarını karşılaştıran NLP araştırma çalışması.</dd></div>
+            </dl>
+            <div class="stack">Python · NLP · BERT · RoBERTa · BiLSTM · XGBoost</div>
+            <div class="project-actions">
+              <span class="button ghost">Kod Özel</span>
+              <a class="button small" href="#contact">Detayları Gör</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-topline">
+              <span class="tag">Java</span>
+              <span class="tag muted">GitHub</span>
+            </div>
+            <h3>NYP Email Sistemi</h3>
+            <p class="project-summary">
+              Nesne yönelimli programlama prensipleriyle geliştirilen e-posta sistemi uygulaması.
+            </p>
+            <dl class="project-details">
+              <div><dt>Sorun</dt><dd>Kullanıcı ve mesaj süreçlerini sınıf yapılarıyla modellemek.</dd></div>
+              <div><dt>Çözüm</dt><dd>Java ile modüler, nesne yönelimli e-posta sistemi tasarlamak.</dd></div>
+              <div><dt>Rolüm</dt><dd>Sınıf tasarımı, temel iş akışı ve kod organizasyonu.</dd></div>
+              <div><dt>Sonuç</dt><dd>Java ve nesne yönelimli programlama bilgisini gösteren açık GitHub projesi.</dd></div>
+            </dl>
+            <div class="stack">Java · OOP · Desktop/App Logic</div>
+            <div class="project-actions">
+              <a class="button ghost" href="https://github.com/Erferza/NYP-Email_Sistemi" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="button small" href="https://github.com/Erferza/NYP-Email_Sistemi" target="_blank" rel="noreferrer">Detayları Gör</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-topline">
+              <span class="tag">Siber Güvenlik</span>
+              <span class="tag muted">Linux</span>
+            </div>
+            <h3>Linux Sistem Log Analizi</h3>
+            <p class="project-summary">
+              Linux sistem günlük kayıtları analiz edilerek başarısız giriş denemelerini ve
+              olası güvenlik olaylarını tespit etmeye yönelik otomasyon çalışması.
+            </p>
+            <dl class="project-details">
+              <div><dt>Sorun</dt><dd>Sistemlerdeki başarısız giriş ve şüpheli olayları görünür hale getirmek.</dd></div>
+              <div><dt>Çözüm</dt><dd>Linux loglarını analiz eden ve olayları sınıflandıran komut dosyaları hazırlamak.</dd></div>
+              <div><dt>Rolüm</dt><dd>Analiz akışı, komut yapısı ve proje dokümantasyonunu hazırlamak.</dd></div>
+              <div><dt>Sonuç</dt><dd>Siber güvenlik ve Linux temelini gösteren açık GitHub projesi.</dd></div>
+            </dl>
+            <div class="stack">Linux · Bash · Log Analizi · Güvenlik Otomasyonu</div>
+            <div class="project-actions">
+              <a class="button ghost" href="https://github.com/Erferza/linux-sistemLogAnalizi" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="button small" href="https://github.com/Erferza/linux-sistemLogAnalizi" target="_blank" rel="noreferrer">Detayları Gör</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-topline">
+              <span class="tag">Ağ</span>
+              <span class="tag muted">Cisco</span>
+            </div>
+            <h3>Cisco Otel Ağı Projesi</h3>
+            <p class="project-summary">
+              Otel senaryosu için Cisco Packet Tracer üzerinde ağ topolojisi, VLAN yapısı ve
+              temel ağ yapılandırmaları tasarlandı.
+            </p>
+            <dl class="project-details">
+              <div><dt>Sorun</dt><dd>Farklı birimlere sahip otel ağı için düzenli ve yönetilebilir topoloji kurmak.</dd></div>
+              <div><dt>Çözüm</dt><dd>VLAN, cihaz bağlantıları ve temel ağ yapılandırmalarıyla segmentasyon yapmak.</dd></div>
+              <div><dt>Rolüm</dt><dd>Ağ topolojisini tasarlamak, yapılandırmaları oluşturmak ve test etmek.</dd></div>
+              <div><dt>Sonuç</dt><dd>Ağ tasarımı ve Cisco Packet Tracer pratiğini gösteren açık GitHub projesi.</dd></div>
+            </dl>
+            <div class="stack">Cisco Packet Tracer · VLAN · Ağ Topolojisi · Temel Ağ Güvenliği</div>
+            <div class="project-actions">
+              <a class="button ghost" href="https://github.com/Erferza/Cisco_OtelAgiProjesi" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="button small" href="https://github.com/Erferza/Cisco_OtelAgiProjesi" target="_blank" rel="noreferrer">Detayları Gör</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="repo-section">
+          <div class="section-heading compact">
+            <p class="section-kicker">GitHub'daki Diğer Projeler</p>
+            <h2>Diğer açık GitHub projeleri</h2>
+          </div>
+          <div class="repo-grid">
+            <a class="repo-card" href="https://github.com/Erferza/PennyWise-Web" target="_blank" rel="noreferrer">
+              <span>C#</span>
+              <h3>PennyWise Web</h3>
+              <p>Kişisel finans ve bütçe takibi odağında geliştirilen web uygulaması.</p>
+            </a>
+            <a class="repo-card" href="https://github.com/Erferza/sanal_isletimSistemiSimulatoru-C" target="_blank" rel="noreferrer">
+              <span>C</span>
+              <h3>Sanal İşletim Sistemi Simülatörü</h3>
+              <p>C ile işletim sistemi kavramlarını simüle eden süreç ve kaynak yönetimi çalışması.</p>
+            </a>
+            <a class="repo-card" href="https://github.com/Erferza/OtelRezervasyonSistemi-VTYS_projesi" target="_blank" rel="noreferrer">
+              <span>PHP / VTYS</span>
+              <h3>Otel Rezervasyon Sistemi</h3>
+              <p>Rezervasyon, müşteri ve kayıt yönetimi için geliştirilen veritabanı projesi.</p>
+            </a>
+            <a class="repo-card" href="https://github.com/Erferza/VeriBilimiVeYapayZekaProjesi" target="_blank" rel="noreferrer">
+              <span>Jupyter</span>
+              <h3>Veri Bilimi ve Yapay Zeka</h3>
+              <p>Veri ön işleme, analiz ve makine öğrenmesi deneylerini içeren notebook projesi.</p>
+            </a>
+            <a class="repo-card" href="https://github.com/Erferza/RestoranSipari-VeRezervasyonSistemi" target="_blank" rel="noreferrer">
+              <span>Web / VTYS</span>
+              <h3>Restoran Sipariş ve Rezervasyon</h3>
+              <p>Restoran sipariş, masa ve rezervasyon akışlarını modelleyen uygulama.</p>
+            </a>
+            <a class="repo-card" href="https://github.com/Erferza/hasta-takip-otomasyonu" target="_blank" rel="noreferrer">
+              <span>Otomasyon</span>
+              <h3>Hasta Takip Otomasyonu</h3>
+              <p>Hasta kayıt, takip ve temel yönetim süreçleri için geliştirilen otomasyon.</p>
+            </a>
+            <a class="repo-card" href="https://github.com/Erferza/python-veriBilimiAtolyeOdevleri" target="_blank" rel="noreferrer">
+              <span>Python</span>
+              <h3>Veri Bilimi Atölye Ödevleri</h3>
+              <p>Python ve notebook pratiklerini içeren veri bilimi ödevleri koleksiyonu.</p>
+            </a>
+            <a class="repo-card" href="https://github.com/Erferza/webProgramlama.io" target="_blank" rel="noreferrer">
+              <span>Web</span>
+              <h3>Web Programlama</h3>
+              <p>Temel web programlama, sayfa yapısı ve arayüz geliştirme örnekleri.</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section skills-section" id="skills">
+        <div class="section-heading">
+          <p class="section-kicker">Yetenekler</p>
+          <h2>Kategorili teknik beceriler</h2>
+        </div>
+        <div class="skills-grid">
+          <div>
+            <h3>Programlama Dilleri</h3>
+            <p>Python, Java, C, C#, SQL</p>
+          </div>
+          <div>
+            <h3>Web</h3>
+            <p>HTML, CSS, JavaScript, ASP.NET temel seviye, PHP temel seviye</p>
+          </div>
+          <div>
+            <h3>Araçlar</h3>
+            <p>Git, GitHub, Linux, QEMU, Docker, Cisco Packet Tracer</p>
+          </div>
+          <div>
+            <h3>Alanlar</h3>
+            <p>Gömülü sistemler, yapay zeka, veri bilimi, ağ teknolojileri, siber güvenlik</p>
+          </div>
+          <div>
+            <h3>AI & Data</h3>
+            <p>CNN, LSTM, XGBoost, YOLOv8, BERT/RoBERTa, veri ön işleme</p>
+          </div>
+          <div>
+            <h3>Gömülü Sistem & Ağ</h3>
+            <p>ESP8266, Deneyap Kart, MPU6050, VLAN, firewall, temel ağ güvenliği</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section timeline" id="experience">
+        <div class="section-heading">
+          <p class="section-kicker">Deneyim / Aktiviteler</p>
+          <h2>Deneyim ve aktiviteler</h2>
+        </div>
+        <div class="timeline-list">
+          <article>
+            <span>Mayıs 2026 - Devam Ediyor</span>
+            <h3>TEKNOFEST Takım Danışmanı / T3 Vakfı</h3>
+            <p>TEKNOFEST proje süreçlerinde takım organizasyonu ve teknik yönlendirme görevleri.</p>
+          </article>
+          <article>
+            <span>Şubat 2026 - Devam Ediyor</span>
+            <h3>Gönüllü Eğitmen / T3 Vakfı Teknoloji Atölyesi</h3>
+            <p>Öğrencilere teknoloji, algoritma ve yapay zeka eğitimlerinde destek; elektronik proje geliştirme çalışmaları.</p>
+          </article>
+          <article>
+            <span>Haziran 2025 - Ağustos 2025</span>
+            <h3>Stajyer - Ağ Departmanı / KayraSYS</h3>
+            <p>Kurumsal ağ ortamları, segmentasyon, güvenlik politikaları ve temel ağ güvenliği süreçleri üzerine çalışma.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div>
+          <p class="section-kicker">İletişim</p>
+          <h2>Internship ve proje görüşmeleri için ulaşabilirsiniz.</h2>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:ferzaer463@gmail.com">ferzaer463@gmail.com</a>
+          <a href="https://github.com/Erferza" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/ferza-er" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="assets/FERZA-ER-CV.pdf" download>CV İndir</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© <span id="year"></span> Ferza Er. Staj başvuruları için hazırlanmıştır.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

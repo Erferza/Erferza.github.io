@@ -74,3 +74,82 @@ const header = document.querySelector('.site-header');
 window.addEventListener('scroll', () => {
   header?.classList.toggle('scrolled', window.scrollY > 10);
 }, { passive: true });
+
+// ── Project Modals
+function openModal(id) {
+  const overlay = document.getElementById(id);
+  if (!overlay) return;
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal(id) {
+  const overlay = document.getElementById(id);
+  if (!overlay) return;
+  overlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// Close modals on overlay click
+document.addEventListener('click', (e) => {
+  if (e.target.classList.contains('project-modal-overlay')) {
+    e.target.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+});
+
+// Close modals on Escape key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.project-modal-overlay.open').forEach(el => {
+      el.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  }
+});
+
+// ── Confusion Matrix Tabs (Steganografi Modal)
+function showMatrix(arch) {
+  // Hide all panels and deactivate all tabs
+  document.querySelectorAll('.modal-matrix-panel:not(.otonom-matrix-panel):not(.nlp-matrix-panel)').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.matrix-tab:not(.otonom-matrix-tab):not(.nlp-matrix-tab)').forEach(t => t.classList.remove('active'));
+
+  // Show selected
+  const panel = document.getElementById('matrix-' + arch);
+  if (panel) panel.classList.add('active');
+
+  // Activate matching tab
+  document.querySelectorAll('.matrix-tab:not(.otonom-matrix-tab):not(.nlp-matrix-tab)').forEach(t => {
+    if (t.getAttribute('onclick') === `showMatrix('${arch}')`) {
+      t.classList.add('active');
+    }
+  });
+}
+
+function showOtonomMatrix(kind) {
+  document.querySelectorAll('.otonom-matrix-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.otonom-matrix-tab').forEach(t => t.classList.remove('active'));
+
+  const panel = document.getElementById('otonom-matrix-' + kind);
+  if (panel) panel.classList.add('active');
+
+  document.querySelectorAll('.otonom-matrix-tab').forEach(t => {
+    if (t.getAttribute('onclick') === `showOtonomMatrix('${kind}')`) {
+      t.classList.add('active');
+    }
+  });
+}
+
+function showNlpMatrix(kind) {
+  document.querySelectorAll('.nlp-matrix-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nlp-matrix-tab').forEach(t => t.classList.remove('active'));
+
+  const panel = document.getElementById('nlp-matrix-' + kind);
+  if (panel) panel.classList.add('active');
+
+  document.querySelectorAll('.nlp-matrix-tab').forEach(t => {
+    if (t.getAttribute('onclick') === `showNlpMatrix('${kind}')`) {
+      t.classList.add('active');
+    }
+  });
+}

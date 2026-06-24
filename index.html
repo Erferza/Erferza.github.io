@@ -221,284 +221,98 @@
       <section id="projects" aria-labelledby="projects-title">
         <div class="container">
           <span class="section-kicker">Projeler</span>
-          <h2 id="projects-title" class="section-title">Mühendislik odaklı çalışmalar</h2>
+          <h2 id="projects-title" class="section-title">Yapay Zeka Tabanlı Araştırma ve Projeler</h2>
 
           <div class="project-grid">
 
             <!-- Featured: TÜBİTAK -->
             <article class="project-card featured reveal">
-              <div class="project-img">
-                <img src="assets/project-steganografi-cover.png" alt="Ses steganografisi spektrogram analizi" loading="lazy" />
-                <span class="project-img-label">TÜBİTAK 2209-A</span>
-              </div>
               <div class="project-card-body">
                 <div class="project-topline">
                   <span class="tag tag-special">⭐ TÜBİTAK 2209-A</span>
                   <span class="tag tag-green">Derin Öğrenme</span>
-                  <span class="tag tag-muted">Kod Özel</span>
                 </div>
                 <h3>Ses Steganografisinde Gizli Veri Tespiti</h3>
                 <p class="project-summary">
-                  Ses dosyalarına gizlenmiş steganografik verinin tespiti için CNN tabanlı hiyerarşik
-                  sınıflandırma yaklaşımı geliştirilen TÜBİTAK araştırma projesi.
+                  SNR tabanlı adaptif LSB gömme ile oluşturulan özgün veri seti üzerinde, CNN tabanlı
+                  mimarilerle stego varlığı ve payload türü ayrımını inceleyen TÜBİTAK araştırma projesi.
                 </p>
 
-                <div class="project-flow" aria-label="Proje akış diyagramı">
-                  <span class="flow-node">Ses Verisi</span>
-                  <span class="flow-arrow">→</span>
-                  <span class="flow-node">Ön İşleme</span>
-                  <span class="flow-arrow">→</span>
-                  <span class="flow-node">Özellik Çıkarımı</span>
-                  <span class="flow-arrow">→</span>
-                  <span class="flow-node">CNN</span>
-                  <span class="flow-arrow">→</span>
-                  <span class="flow-node">Karar</span>
-                </div>
-
-                <div class="project-details">
-                  <div><dt>Sorun</dt><dd>Ses içine gizlenen veri örüntülerini tespit etmek.</dd></div>
-                  <div><dt>Çözüm</dt><dd>Veri ön işleme + CNN tabanlı hiyerarşik sınıflandırma akışı.</dd></div>
-                  <div><dt>Rolüm</dt><dd>Veri hazırlama, model eğitimi, performans analizi ve raporlama.</dd></div>
-                  <div><dt>Sonuç</dt><dd>TÜBİTAK 2209-A kapsamında kabul alan araştırma projesi.</dd></div>
-                </div>
-
-                <div class="eng-grid">
-                  <div class="eng-item">
-                    <h4>🔬 Teknik Derinlik</h4>
-                    <p>Ses sinyallerinden modele uygun temsil çıkarımı, sınıf ayrımı ve deney sonuçlarının ölçülmesi.</p>
-                  </div>
-                  <div class="eng-item">
-                    <h4>🔄 Süreç</h4>
-                    <p>Literatür taraması → veri hazırlama → model denemeleri → performans karşılaştırması → makale.</p>
-                  </div>
-                  <div class="eng-item">
-                    <h4>💡 Öğrenimler</h4>
-                    <p>Ham verinin modele uygun hale getirilmesi, mimari seçimi kadar kritik bir adım.</p>
-                  </div>
+                <div class="project-highlights" aria-label="Öne çıkan teknik sonuçlar">
+                  <span>SNR kontrollü veri gömme</span>
+                  <span>İkili · dörtlü · hiyerarşik sınıflandırma</span>
+                  <span>%96.11 doğruluk · %95.60 Macro-F1</span>
                 </div>
 
                 <div class="stack-line">Python · CNN · Derin Öğrenme · Sinyal İşleme · TensorFlow/Keras</div>
                 <div class="project-actions">
-                  <span class="btn btn-ghost btn-sm">🔒 Kod Özel</span>
-                  <a class="btn btn-secondary btn-sm" href="#contact">Detaylar için İletişim</a>
+                  <button class="btn btn-primary project-detail-cta" onclick="openModal('modal-steg')">
+                    Teknik Detayları Gör
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </button>
                 </div>
               </div>
             </article>
 
             <!-- Autonomous Vehicle -->
             <article class="project-card reveal">
-              <div class="project-img">
-                <img src="assets/project-otonom-cover.png" alt="Otonom araç yapay zeka sistemi" loading="lazy" />
-                <span class="project-img-label">Yapay Zeka</span>
-              </div>
               <div class="project-card-body">
                 <div class="project-topline">
                   <span class="tag tag-emerald">Yapay Zeka</span>
-                  <span class="tag tag-muted">Açık Kaynak</span>
+                  <span class="tag tag-green">Otonom Güvenlik</span>
                 </div>
-                <h3>Otonom Araçlarda Anomali Tespiti</h3>
+                <h3>Otonom Araçlarda Siber Saldırı Analizi</h3>
                 <p class="project-summary">
-                  Otonom araç sistemlerinde sensör verisi üzerinden anomali tespiti ve güvenli mod
-                  karar mekanizması geliştiren ML projesi.
+                  Ağ trafiği, kendi oluşturduğumuz CARLA araç davranış veri seti ve görsel çevresel
+                  bağlamı birleştiren çok katmanlı yapay zeka mimarisiyle risk ve güvenli mod kararı üreten araştırma projesi.
                 </p>
-                <div class="project-flow">
-                  <span class="flow-node">Sensör</span>
-                  <span class="flow-arrow">→</span>
-                  <span class="flow-node">Ön İşleme</span>
-                  <span class="flow-arrow">→</span>
-                  <span class="flow-node">Anomali Modeli</span>
-                  <span class="flow-arrow">→</span>
-                  <span class="flow-node">Risk Skoru</span>
-                  <span class="flow-arrow">→</span>
-                  <span class="flow-node">Güvenli Mod</span>
+
+                <div class="project-highlights" aria-label="Öne çıkan otonom güvenlik sonuçları">
+                  <span>CIC · CARLA · nuScenes katmanları</span>
+                  <span>Random Forest fusion + guardrail</span>
+                  <span>%99.40 CIC · %78.42 fusion risk</span>
                 </div>
-                <div class="project-details">
-                  <div><dt>Sorun</dt><dd>Sensör çıktılarında saldırı / risk durumlarını yakalamak.</dd></div>
-                  <div><dt>Çözüm</dt><dd>ML ile anomali ve güvenli mod sınıflandırması.</dd></div>
-                  <div><dt>Öğrenim</dt><dd>Model başarısı kadar karar mekanizmasının açıklanabilirliği de kritik.</dd></div>
-                </div>
-                <div class="stack-line">Python · Makine Öğrenmesi · Anomali Tespiti · Simülasyon</div>
+
+                <div class="stack-line">Python · Random Forest · CARLA · CIC-ToN-IoT · nuScenes · Güvenli Mod</div>
                 <div class="project-actions">
+                  <button class="btn btn-primary project-detail-cta" onclick="openModal('modal-otonom')">
+                    Teknik Detayları Gör
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </button>
                   <a class="btn btn-ghost btn-sm" href="https://github.com/Erferza/Otonom-Arac-Guvenligi" target="_blank" rel="noreferrer">
                     <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
                     GitHub
                   </a>
-                  <a class="btn btn-secondary btn-sm" href="https://github.com/Erferza/Otonom-Arac-Guvenligi" target="_blank" rel="noreferrer">Detayları Gör →</a>
                 </div>
               </div>
             </article>
 
             <!-- NLP -->
             <article class="project-card reveal">
-              <div class="project-img">
-                <img src="assets/nlp/Ekran Resmi 2026-06-21 01.57.29.png" alt="NLP model doğruluk karşılaştırması" loading="lazy" style="object-position: center 15%;" />
-                <span class="project-img-label">Model Accuracy — BERT · BiLSTM · XGBoost</span>
-              </div>
               <div class="project-card-body">
                 <div class="project-topline">
                   <span class="tag tag-teal">NLP</span>
                   <span class="tag tag-teal">BERT / RoBERTa</span>
-                  <span class="tag tag-muted">Kod Özel</span>
                 </div>
-                <h3>Söylem Tabanlı Yalan &amp; Risk Tespiti</h3>
+                <h3>Satır Aralarındaki Gerçek</h3>
                 <p class="project-summary">
-                  Yazılı metinlerde doğruluk ve risk eğilimlerinin tespiti için dört farklı NLP mimarisi
-                  karşılaştırıldı: BERT, RoBERTa, BiLSTM ve XGBoost.
+                  Yazılı metinlerde doğruluk yönü, belirsizlik ve söylem biçimini analiz ederek
+                  false, mixed ve true eğilimleri için risk odaklı değerlendirme yapan NLP projesi.
                 </p>
-                <div class="project-flow">
-                  <span class="flow-node">Metin</span>
-                  <span class="flow-arrow">→</span>
-                  <span class="flow-node">Temizleme</span>
-                  <span class="flow-arrow">→</span>
-                  <span class="flow-node">Temsil</span>
-                  <span class="flow-arrow">→</span>
-                  <span class="flow-node">Model</span>
-                  <span class="flow-arrow">→</span>
-                  <span class="flow-node">Sınıf</span>
+
+                <div class="project-highlights" aria-label="Öne çıkan NLP sonuçları">
+                  <span>LIAR eğitimi · Supreme Court inference</span>
+                  <span>TF-IDF · SBERT · Transformer temsilleri</span>
+                  <span>%80.63 doğruluk · %80.17 Macro-F1</span>
                 </div>
-                <div class="project-details">
-                  <div><dt>Sorun</dt><dd>Metinlerde yalan ve risk eğilimini otomatik analiz etmek.</dd></div>
-                  <div><dt>Öğrenim</dt><dd>Veri kalitesi ve etiket tutarlılığı, model seçiminden önce gelir.</dd></div>
-                </div>
-                <div class="stack-line">Python · NLP · BERT · RoBERTa · BiLSTM · XGBoost</div>
+
+                <div class="stack-line">Python · NLP · SVM · BERT/RoBERTa · BiLSTM · XGBoost · SBERT</div>
                 <div class="project-actions">
-                  <span class="btn btn-ghost btn-sm">🔒 Kod Özel</span>
-                  <a class="btn btn-secondary btn-sm" href="#contact">Detaylar için İletişim</a>
+                  <button class="btn btn-primary project-detail-cta" onclick="openModal('modal-nlp')">
+                    Teknik Detayları Gör
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </button>
                 </div>
-              </div>
-            </article>
-
-            <!-- Linux Log -->
-            <article class="project-card reveal">
-              <div class="project-topline">
-                <span class="tag tag-emerald">Gömülü Linux</span>
-                <span class="tag tag-muted">Açık Kaynak</span>
-              </div>
-              <h3>Mini Gömülü Linux Log Sistemi</h3>
-              <p class="project-summary">
-                Kısıtlı kaynaklı ortamlar için log toplama, filtreleme ve web arayüzü üzerinden
-                görselleştirme sunan hafif izleme aracı.
-              </p>
-              <div class="project-flow">
-                <span class="flow-node">Sistem Logu</span>
-                <span class="flow-arrow">→</span>
-                <span class="flow-node">Okuma</span>
-                <span class="flow-arrow">→</span>
-                <span class="flow-node">Filtreleme</span>
-                <span class="flow-arrow">→</span>
-                <span class="flow-node">Web UI</span>
-              </div>
-              <div class="project-details">
-                <div><dt>Sorun</dt><dd>Kısıtlı sistemlerde log kayıtlarının okunabilir şekilde takibi.</dd></div>
-                <div><dt>Öğrenim</dt><dd>Basit, hızlı ve okunabilir çözümler gömülü dünyada çok daha değerli.</dd></div>
-              </div>
-              <div class="stack-line">HTML · Linux · Gömülü Sistemler · Log İzleme</div>
-              <div class="project-actions">
-                <a class="btn btn-ghost btn-sm" href="https://github.com/Erferza/mini-embedded-linux-log-system" target="_blank" rel="noreferrer">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
-                  GitHub
-                </a>
-                <a class="btn btn-secondary btn-sm" href="https://github.com/Erferza/mini-embedded-linux-log-system" target="_blank" rel="noreferrer">Detayları Gör →</a>
-              </div>
-            </article>
-
-            <!-- Siber Güvenlik -->
-            <article class="project-card reveal">
-              <div class="project-topline">
-                <span class="tag tag-green">Siber Güvenlik</span>
-                <span class="tag tag-muted">Linux</span>
-              </div>
-              <h3>Linux Sistem Log Analizi</h3>
-              <p class="project-summary">
-                Linux sistem günlük kayıtlarını analiz ederek başarısız giriş denemelerini ve şüpheli
-                güvenlik olaylarını tespit eden otomasyon.
-              </p>
-              <div class="project-flow">
-                <span class="flow-node">Auth Log</span>
-                <span class="flow-arrow">→</span>
-                <span class="flow-node">Pattern</span>
-                <span class="flow-arrow">→</span>
-                <span class="flow-node">Sayım</span>
-                <span class="flow-arrow">→</span>
-                <span class="flow-node">Uyarı</span>
-              </div>
-              <div class="project-details">
-                <div><dt>Sorun</dt><dd>Başarısız giriş ve şüpheli olayları görünür kılmak.</dd></div>
-                <div><dt>Öğrenim</dt><dd>Doğru eşik ve okunabilir çıktı, küçük betikleri bile değerli kılar.</dd></div>
-              </div>
-              <div class="stack-line">Linux · Bash · Log Analizi · Güvenlik Otomasyonu</div>
-              <div class="project-actions">
-                <a class="btn btn-ghost btn-sm" href="https://github.com/Erferza/linux-sistemLogAnalizi" target="_blank" rel="noreferrer">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
-                  GitHub
-                </a>
-                <a class="btn btn-secondary btn-sm" href="https://github.com/Erferza/linux-sistemLogAnalizi" target="_blank" rel="noreferrer">Detayları Gör →</a>
-              </div>
-            </article>
-
-            <!-- NYP -->
-            <article class="project-card reveal">
-              <div class="project-topline">
-                <span class="tag tag-teal">Java</span>
-                <span class="tag tag-muted">Açık Kaynak</span>
-              </div>
-              <h3>NYP E-posta Sistemi</h3>
-              <p class="project-summary">
-                Nesne yönelimli programlama prensipleriyle tasarlanan, kullanıcı ve mesaj süreçlerini
-                modüler sınıf yapılarıyla modelleyen e-posta uygulaması.
-              </p>
-              <div class="project-flow">
-                <span class="flow-node">Kullanıcı</span>
-                <span class="flow-arrow">→</span>
-                <span class="flow-node">Mesaj</span>
-                <span class="flow-arrow">→</span>
-                <span class="flow-node">Posta Kutusu</span>
-                <span class="flow-arrow">→</span>
-                <span class="flow-node">İş Kuralları</span>
-              </div>
-              <div class="project-details">
-                <div><dt>Öğrenim</dt><dd>OOP'de sınıf sınırlarını doğru çizmek, genişletmeyi belirgin şekilde kolaylaştırıyor.</dd></div>
-              </div>
-              <div class="stack-line">Java · OOP · Uygulama Mantığı</div>
-              <div class="project-actions">
-                <a class="btn btn-ghost btn-sm" href="https://github.com/Erferza/NYP-Email_Sistemi" target="_blank" rel="noreferrer">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
-                  GitHub
-                </a>
-                <a class="btn btn-secondary btn-sm" href="https://github.com/Erferza/NYP-Email_Sistemi" target="_blank" rel="noreferrer">Detayları Gör →</a>
-              </div>
-            </article>
-
-            <!-- Cisco -->
-            <article class="project-card reveal">
-              <div class="project-topline">
-                <span class="tag tag-green">Ağ</span>
-                <span class="tag tag-muted">Cisco Packet Tracer</span>
-              </div>
-              <h3>Cisco Otel Ağı Tasarımı</h3>
-              <p class="project-summary">
-                Otel senaryosu için Cisco Packet Tracer üzerinde VLAN yapısı, ağ segmentasyonu ve
-                temel ağ güvenliği konfigürasyonları tasarlandı.
-              </p>
-              <div class="project-flow">
-                <span class="flow-node">Departmanlar</span>
-                <span class="flow-arrow">→</span>
-                <span class="flow-node">VLAN</span>
-                <span class="flow-arrow">→</span>
-                <span class="flow-node">Switch / Router</span>
-                <span class="flow-arrow">→</span>
-                <span class="flow-node">Test</span>
-              </div>
-              <div class="project-details">
-                <div><dt>Öğrenim</dt><dd>Güvenlik, yönetilebilirlik ve ölçeklenebilirlik topoloji aşamasında birlikte düşünülmeli.</dd></div>
-              </div>
-              <div class="stack-line">Cisco Packet Tracer · VLAN · Ağ Topolojisi</div>
-              <div class="project-actions">
-                <a class="btn btn-ghost btn-sm" href="https://github.com/Erferza/Cisco_OtelAgiProjesi" target="_blank" rel="noreferrer">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
-                  GitHub
-                </a>
-                <a class="btn btn-secondary btn-sm" href="https://github.com/Erferza/Cisco_OtelAgiProjesi" target="_blank" rel="noreferrer">Detayları Gör →</a>
               </div>
             </article>
 
@@ -509,6 +323,28 @@
             <span class="section-kicker">Diğer Projeler</span>
             <h3 style="font-size:1.6rem;font-weight:800;letter-spacing:-0.02em;margin-bottom:28px;color:var(--text);">GitHub'daki açık repolar</h3>
             <div class="repo-grid">
+              <!-- Öne çıkan projelerden aşağıya taşınanlar -->
+              <a class="repo-card" href="https://github.com/Erferza/mini-embedded-linux-log-system" target="_blank" rel="noreferrer">
+                <span class="repo-lang">Linux / HTML</span>
+                <h3>Mini Gömülü Linux Log Sistemi</h3>
+                <p>Kısıtlı kaynaklı ortamlar için log toplama, filtreleme ve web arayüzü üzerinden görselleştirme sunan hafif izleme aracı.</p>
+              </a>
+              <a class="repo-card" href="https://github.com/Erferza/linux-sistemLogAnalizi" target="_blank" rel="noreferrer">
+                <span class="repo-lang">Bash / Linux</span>
+                <h3>Linux Sistem Log Analizi</h3>
+                <p>Linux sistem günlük kayıtlarını analiz ederek başarısız giriş denemelerini ve şüpheli güvenlik olaylarını tespit eden otomasyon.</p>
+              </a>
+              <a class="repo-card" href="https://github.com/Erferza/NYP-Email_Sistemi" target="_blank" rel="noreferrer">
+                <span class="repo-lang">Java</span>
+                <h3>NYP E-posta Sistemi</h3>
+                <p>Nesne yönelimli programlama prensipleriyle tasarlanan, modüler sınıf yapılarıyla e-posta uygulaması.</p>
+              </a>
+              <a class="repo-card" href="https://github.com/Erferza/Cisco_OtelAgiProjesi" target="_blank" rel="noreferrer">
+                <span class="repo-lang">Cisco / VLAN</span>
+                <h3>Cisco Otel Ağı Tasarımı</h3>
+                <p>Otel senaryosu için VLAN yapısı, ağ segmentasyonu ve temel ağ güvenliği konfigürasyonları.</p>
+              </a>
+              <!-- Diğer repolar -->
               <a class="repo-card" href="https://github.com/Erferza/PennyWise-Web" target="_blank" rel="noreferrer">
                 <span class="repo-lang">C#</span>
                 <h3>PennyWise Web</h3>
@@ -775,5 +611,310 @@
     </footer>
 
     <script src="script.js"></script>
+
+    <!-- ── PROJECT MODALS ──────────────────────────────────── -->
+
+    <!-- TÜBİTAK Steganografi Modal -->
+    <div class="project-modal-overlay" id="modal-steg" role="dialog" aria-modal="true" aria-labelledby="modal-steg-title">
+      <div class="project-modal">
+        <button class="modal-close" onclick="closeModal('modal-steg')" aria-label="Kapat">✕</button>
+        <div class="modal-hero">
+          <div class="modal-hero-text">
+            <span class="modal-hero-badge">TÜBİTAK 2209-A · Ses Steganalizi</span>
+            <h2 class="modal-hero-title" id="modal-steg-title">Ses Steganografisinde<br><span class="accent">Payload Türü Tespiti</span></h2>
+            <p class="modal-hero-desc">
+              Klasik LSB tabanlı steganografinin sınırlılıkları dikkate alınarak, SNR kontrollü adaptif gömme stratejisiyle özgün ve çok sınıflı bir ses steganalizi veri seti oluşturuldu. Bu veri seti üzerinde CNN tabanlı ve attention/Transformer bileşenleri içeren hibrit mimarilerle stego varlığı ve payload türü ayrımı değerlendirildi.
+            </p>
+            <div class="modal-tech-pills">
+              <span class="modal-tech-pill">Python</span>
+              <span class="modal-tech-pill">LSB</span>
+              <span class="modal-tech-pill">SNR</span>
+              <span class="modal-tech-pill">CNN</span>
+              <span class="modal-tech-pill">DenseNet</span>
+              <span class="modal-tech-pill">ResNet</span>
+              <span class="modal-tech-pill">EfficientNet</span>
+            </div>
+          </div>
+          <div class="modal-hero-visual">
+            <img src="assets/steganografi/WhatsApp Image 2026-06-24 at 20.01.39 (1).jpeg" alt="TÜBİTAK 2209-A proje sunumu" style="object-position: center 42%;" />
+          </div>
+          <div class="modal-hero-corner">
+            Akademik Çalışma<br>
+            <strong>TÜBİTAK 2209-A</strong>
+            Destekli Proje
+          </div>
+        </div>
+
+        <div class="modal-arch">
+          <h3 class="modal-section-title">Sistem Mimarisi & Pipeline</h3>
+          <div class="modal-flow">
+            <div class="modal-flow-box">WAV Ses<span class="sub">Ham Veri</span></div>
+            <span class="modal-flow-arrow">→</span>
+            <div class="modal-flow-box hi">LSB Gömme<span class="sub">Adaptif SNR</span></div>
+            <span class="modal-flow-arrow">→</span>
+            <div class="modal-flow-box">Temsil Alanı<span class="sub">Zamansal · Spektral</span></div>
+            <span class="modal-flow-arrow">→</span>
+            <div class="modal-flow-box hi">CNN Modelleri<span class="sub">DenseNet · ResNet · EfficientNet</span></div>
+            <span class="modal-flow-arrow">→</span>
+            <div class="modal-flow-box">Strateji<span class="sub">İkili · Dörtlü · Hiyerarşik</span></div>
+            <span class="modal-flow-arrow">→</span>
+            <div class="modal-flow-box hi">Payload Tespiti<span class="sub">Cover / Image / Text / Audio</span></div>
+          </div>
+        </div>
+
+        <div class="modal-image-section">
+          <h3 class="modal-section-title">Veri Gömme & Spektrogram Karşılaştırması</h3>
+          <p class="modal-image-caption">SNR tabanlı adaptif LSB gömme yaklaşımı, sabit payload oranı yerine her ses örneğinde algısal bozulmayı sınırlayan dengeli bir süreç kurmak için kullanıldı.</p>
+          <div class="modal-full-image">
+            <img src="assets/steganografi/project-steganografi-cover.png" alt="Payload türlerine göre cover ve stego sinyallerinin spektrogram kıyaslaması" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="modal-summary">
+          <h3 class="modal-section-title">Metodoloji</h3>
+          <div class="modal-summary-grid">
+            <div class="modal-summary-card"><span class="s-icon">🎯</span><h4>Veri Seti</h4><p>Farklı türlerde gizli bilgi içeren, deneysel olarak denetlenebilir ve karşılaştırılabilir özgün bir ses steganalizi veri seti oluşturuldu.</p></div>
+            <div class="modal-summary-card"><span class="s-icon">🧩</span><h4>Gömme Yaklaşımı</h4><p>LSB tabanlı gömme sürecinde algısal kalite SNR metriğiyle izlendi ve gömme yoğunluğu hedef SNR aralığına göre adaptif ayarlandı.</p></div>
+            <div class="modal-summary-card"><span class="s-icon">🔬</span><h4>Mimari Kıyas</h4><p>Standart CNN, DenseNet, ResNet ve EfficientNet mimarileri yerel zamansal-frekanssal örüntüler ve bağlamsal ilişkiler açısından karşılaştırıldı.</p></div>
+            <div class="modal-summary-card"><span class="s-icon">📊</span><h4>Stratejiler</h4><p>Problem ikili, dörtlü multiclass ve hiyerarşik sınıflandırma stratejileriyle ele alınarak hem stego varlığı hem de payload ayrımı incelendi.</p></div>
+          </div>
+        </div>
+
+        <div class="modal-image-section">
+          <h3 class="modal-section-title">Mimari Kıyaslama — Karmaşıklık Matrisleri</h3>
+          <p class="modal-image-caption">Matrisler, ikili, dörtlü ve hiyerarşik sınıflandırma senaryolarında CNN tabanlı mimarilerin test davranışını karşılaştırmak için kullanıldı.</p>
+          <div class="modal-matrix-tabs">
+            <button class="matrix-tab active" onclick="showMatrix('cnn')">Standart CNN</button>
+            <button class="matrix-tab" onclick="showMatrix('densenet')">DenseNet</button>
+            <button class="matrix-tab" onclick="showMatrix('efficientnet')">EfficientNet</button>
+          </div>
+          <div class="modal-matrix-panel active" id="matrix-cnn">
+            <img src="assets/steganografi/Ekran Resmi 2026-06-24 19.57.12.png" alt="Standart CNN mimarisi karmaşıklık matrisleri" loading="lazy" />
+          </div>
+          <div class="modal-matrix-panel" id="matrix-densenet">
+            <img src="assets/steganografi/Ekran Resmi 2026-06-24 19.57.20.png" alt="DenseNet mimarisi karmaşıklık matrisleri" loading="lazy" />
+          </div>
+          <div class="modal-matrix-panel" id="matrix-efficientnet">
+            <img src="assets/steganografi/Ekran Resmi 2026-06-24 19.57.28.png" alt="EfficientNet mimarisi karmaşıklık matrisleri" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="modal-summary" style="margin-top: 0;">
+          <h3 class="modal-section-title">Sonuç & Katkılar</h3>
+          <div class="modal-summary-grid">
+            <div class="modal-summary-card"><span class="s-icon">🏆</span><h4>%96.11 Doğruluk</h4><p>Önerilen hibrit hiyerarşik mimari, uçtan uca değerlendirmede %95.60 Macro-F1 ile dengeli ve kararlı bir performans profili sergiledi.</p></div>
+            <div class="modal-summary-card"><span class="s-icon">📈</span><h4>Temsil Bulgusu</h4><p>Zaman-frekans temsilleri steganografik müdahaleyi yakalamada, zamansal temsiller ise payload türlerine özgü ince farkları ayırmada daha etkili bulundu.</p></div>
+            <div class="modal-summary-card"><span class="s-icon">🔭</span><h4>Çok Aşamalı Tespit</h4><p>Ses steganalizinin yalnızca stego varlığı tespiti değil, gömülü yük türünün karakterize edilmesini de gerektiren çok aşamalı bir problem olduğu gösterildi.</p></div>
+            <div class="modal-summary-card"><span class="s-icon">🛠</span><h4>Gelecek Çalışma</h4><p>Farklı gömme oranları, MP3/FLAC formatları, kayıplı sıkıştırma koşulları ve standart uçtan uca değerlendirme protokolleri hedeflenmektedir.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Otonom Araç Modal -->
+    <div class="project-modal-overlay" id="modal-otonom" role="dialog" aria-modal="true" aria-labelledby="modal-otonom-title">
+      <div class="project-modal">
+        <button class="modal-close" onclick="closeModal('modal-otonom')" aria-label="Kapat">✕</button>
+        <div class="modal-hero">
+          <div class="modal-hero-text">
+            <span class="modal-hero-badge">Otonom Güvenlik · Fusion Karar Sistemi</span>
+            <h2 class="modal-hero-title" id="modal-otonom-title">Otonom Araçlarda<br><span class="accent">Çok Katmanlı Saldırı Analizi</span></h2>
+            <p class="modal-hero-desc">
+              Ağ trafiği analizi, araç davranış anomalileri ve görsel çevresel bağlam doğrulamasını birleştiren yapay zeka destekli bir güvenlik mimarisi geliştirildi. Sistem, saldırı türünü tekrar tahmin etmek yerine nihai risk seviyesini, risk skorunu ve uygulanacak güvenli mod kararını üretmeye odaklandı.
+            </p>
+            <div class="modal-tech-pills">
+              <span class="modal-tech-pill">Python</span>
+              <span class="modal-tech-pill">Random Forest</span>
+              <span class="modal-tech-pill">CIC-ToN-IoT</span>
+              <span class="modal-tech-pill">CARLA</span>
+              <span class="modal-tech-pill">nuScenes</span>
+              <span class="modal-tech-pill">Guardrail</span>
+            </div>
+          </div>
+          <div class="modal-hero-visual">
+            <img src="assets/otonom/WhatsApp Image 2026-06-24 at 20.01.39.jpeg" alt="Otonom araç güvenliği proje sunumu" style="object-position: center 42%;" />
+          </div>
+        </div>
+        <div class="modal-arch">
+          <h3 class="modal-section-title">Çok Katmanlı Sistem Mimarisi</h3>
+          <div class="modal-flow">
+            <div class="modal-flow-box">CIC-ToN-IoT<span class="sub">Ağ Saldırıları</span></div>
+            <div class="modal-flow-box">CARLA<span class="sub">Araç Davranışı</span></div>
+            <div class="modal-flow-box">nuScenes<span class="sub">Görsel Bağlam</span></div>
+            <span class="modal-flow-arrow">→</span>
+            <div class="modal-flow-box hi">Katman Çıktıları<span class="sub">Olasılık · Güven · Risk</span></div>
+            <span class="modal-flow-arrow">→</span>
+            <div class="modal-flow-box hi">RF Fusion<span class="sub">Risk Kararı</span></div>
+            <span class="modal-flow-arrow">→</span>
+            <div class="modal-flow-box">Guardrail<span class="sub">Eşik Politikası</span></div>
+            <span class="modal-flow-arrow">→</span>
+            <div class="modal-flow-box hi">Safe Mode<span class="sub">Operasyonel Karar</span></div>
+          </div>
+        </div>
+        <div class="modal-summary">
+          <h3 class="modal-section-title">Metodoloji & Bulgular</h3>
+          <div class="modal-summary-grid">
+            <div class="modal-summary-card"><span class="s-icon">🎯</span><h4>Çok Kaynaklı Analiz</h4><p>CIC tabanlı ağ saldırıları, kendi oluşturduğumuz CARLA araç davranış/anomali veri seti ve nuScenes tabanlı çevresel bağlam özellikleri ayrı katmanlarda işlendi.</p></div>
+            <div class="modal-summary-card"><span class="s-icon">🧩</span><h4>Fusion Kararı</h4><p>Random Forest tabanlı iki fusion modeli; nihai risk sınıflandırması ve normal, monitoring, degraded safe, emergency safe mode kararlarını üretti.</p></div>
+            <div class="modal-summary-card"><span class="s-icon">🛡</span><h4>Guardrail Politikası</h4><p>0.55 binary saldırı, 0.70 yüksek risk, 0.85 kritik risk ve 0.65 hallucination eşikleriyle kararlar güvenli tarafa yönlendirildi.</p></div>
+            <div class="modal-summary-card"><span class="s-icon">📡</span><h4>Canlı CARLA Testleri</h4><p>Final pipeline ve 15 NPC'li stres testlerinde sistemin katmanlar arası uyumsuzluklarda operasyonel safe-mode kararı üretebildiği gözlemlendi.</p></div>
+          </div>
+        </div>
+
+        <div class="modal-summary" style="padding-top: 24px;">
+          <h3 class="modal-section-title">Deneysel Sonuçlar</h3>
+          <div class="modal-summary-grid">
+            <div class="modal-summary-card"><span class="s-icon">📈</span><h4>%99.40 CIC Binary</h4><p>Ağ tabanlı binary saldırı tespit katmanında yüksek doğruluk elde edildi.</p></div>
+            <div class="modal-summary-card"><span class="s-icon">🚗</span><h4>%72.37 CARLA</h4><p>CARLA saldırı türü sınıflandırması, araç davranışı ve sensör temelli anomalileri modelledi.</p></div>
+            <div class="modal-summary-card"><span class="s-icon">🔀</span><h4>%78.42 Fusion Risk</h4><p>Fusion katmanı saldırı türü yerine nihai attack/normal risk kararını üretmeye odaklandı.</p></div>
+            <div class="modal-summary-card"><span class="s-icon">🧭</span><h4>%75.16 Safe Mode</h4><p>Güvenli mod karar katmanı 0.7761 Macro-F1 ile operasyonel karar üretimi sağladı.</p></div>
+          </div>
+        </div>
+
+        <div class="modal-image-section">
+          <h3 class="modal-section-title">Test Matrisleri</h3>
+          <p class="modal-image-caption">CIC, CARLA ve fusion katmanlarının ikili karar ve çok sınıflı karar davranışları yan yana karşılaştırıldı.</p>
+          <div class="modal-matrix-tabs">
+            <button class="matrix-tab otonom-matrix-tab active" onclick="showOtonomMatrix('cic')">CIC</button>
+            <button class="matrix-tab otonom-matrix-tab" onclick="showOtonomMatrix('carla')">CARLA</button>
+            <button class="matrix-tab otonom-matrix-tab" onclick="showOtonomMatrix('fusion')">Fusion</button>
+          </div>
+          <div class="modal-matrix-panel otonom-matrix-panel active" id="otonom-matrix-cic">
+            <div class="matrix-pair">
+              <figure>
+                <img src="assets/otonom/cic_test_binary_confusion_matrix kopyası.png" alt="CIC binary saldırı tespit karmaşıklık matrisi" loading="lazy" />
+                <figcaption>Binary saldırı tespiti</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/otonom/cic_test_attack_type_confusion_matrix kopyası.png" alt="CIC saldırı türü karmaşıklık matrisi" loading="lazy" />
+                <figcaption>Saldırı türü sınıflandırması</figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="modal-matrix-panel otonom-matrix-panel" id="otonom-matrix-carla">
+            <div class="matrix-pair">
+              <figure>
+                <img src="assets/otonom/carla_test_binary_confusion_matrix kopyası.png" alt="CARLA binary anomali tespit karmaşıklık matrisi" loading="lazy" />
+                <figcaption>Binary anomali tespiti</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/otonom/carla_test_attack_type_confusion_matrix kopyası.png" alt="CARLA saldırı türü karmaşıklık matrisi" loading="lazy" />
+                <figcaption>Saldırı türü sınıflandırması</figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="modal-matrix-panel otonom-matrix-panel" id="otonom-matrix-fusion">
+            <div class="matrix-pair">
+              <figure>
+                <img src="assets/otonom/fusion_test_risk_confusion_matrix kopyası.png" alt="Fusion risk karmaşıklık matrisi" loading="lazy" />
+                <figcaption>Nihai risk kararı</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/otonom/fusion_test_safe_mode_confusion_matrix kopyası.png" alt="Fusion safe mode karmaşıklık matrisi" loading="lazy" />
+                <figcaption>Güvenli mod kararı</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NLP Modal -->
+    <div class="project-modal-overlay" id="modal-nlp" role="dialog" aria-modal="true" aria-labelledby="modal-nlp-title">
+      <div class="project-modal">
+        <button class="modal-close" onclick="closeModal('modal-nlp')" aria-label="Kapat">✕</button>
+        <div class="modal-hero">
+          <div class="modal-hero-text">
+            <span class="modal-hero-badge">NLP · Söylem Analizi · LIAR</span>
+            <h2 class="modal-hero-title" id="modal-nlp-title">Satır Aralarındaki Gerçek<br><span class="accent">Yalan ve Risk Eğilimi Tespiti</span></h2>
+            <p class="modal-hero-desc">
+              Bu çalışma, uzun ve resmi metinlerde mutlak doğruluğu kesin biçimde belirlemek yerine; ifadelerin doğruluk yönünü, belirsizlik düzeyini ve söylem biçimini analiz ederek risk odaklı bir değerlendirme üretmeyi amaçladı.
+            </p>
+            <div class="modal-tech-pills">
+              <span class="modal-tech-pill">Python</span>
+              <span class="modal-tech-pill">LIAR Dataset</span>
+              <span class="modal-tech-pill">Supreme Court</span>
+              <span class="modal-tech-pill">TF-IDF</span>
+              <span class="modal-tech-pill">SBERT</span>
+              <span class="modal-tech-pill">BERT/RoBERTa</span>
+            </div>
+          </div>
+          <div class="modal-hero-visual">
+            <img src="assets/nlp/Ekran Resmi 2026-06-21 01.57.55.png" alt="NLP model başarı metrikleri karşılaştırması" style="object-position: center 20%;" />
+          </div>
+        </div>
+        <div class="modal-arch">
+          <h3 class="modal-section-title">Model Pipeline</h3>
+          <div class="modal-flow">
+            <div class="modal-flow-box">LIAR<span class="sub">Eğitim · Test</span></div>
+            <span class="modal-flow-arrow">→</span>
+            <div class="modal-flow-box">Ön İşleme<span class="sub">URL · Unicode · Lemma</span></div>
+            <span class="modal-flow-arrow">→</span>
+            <div class="modal-flow-box hi">Temsil<span class="sub">TF-IDF · SBERT · Subword</span></div>
+            <span class="modal-flow-arrow">→</span>
+            <div class="modal-flow-box">5 Model Ailesi<span class="sub">SVM · BERT · BiLSTM · XGB</span></div>
+            <span class="modal-flow-arrow">→</span>
+            <div class="modal-flow-box">Sınıflandırma<span class="sub">2 · 3 · 6 Sınıf</span></div>
+            <span class="modal-flow-arrow">→</span>
+            <div class="modal-flow-box hi">Inference<span class="sub">Supreme Court</span></div>
+          </div>
+        </div>
+        <div class="modal-summary">
+          <h3 class="modal-section-title">Metodoloji</h3>
+          <div class="modal-summary-grid">
+            <div class="modal-summary-card"><span class="s-icon">🎯</span><h4>Amaç</h4><p>İnkâr, güçlü doğrulama, kaçamak ifade ve belirsizlik gibi söylem örüntülerini analiz ederek false, mixed ve true eğilimlerini sınıflandırmak.</p></div>
+            <div class="modal-summary-card"><span class="s-icon">📚</span><h4>Veri Kümeleri</h4><p>Modeller LIAR veri kümesi üzerinde eğitildi; Supreme Court tutanakları ise uzun ve resmi metinlerde çıkarım davranışını gözlemlemek için kullanıldı.</p></div>
+            <div class="modal-summary-card"><span class="s-icon">🧩</span><h4>Model Aileleri</h4><p>TF-IDF tabanlı SVM, BERT/RoBERTa, BiLSTM, XGBoost-SBERT ve XGBoost TF-IDF+karakter kurulumları karşılaştırıldı.</p></div>
+            <div class="modal-summary-card"><span class="s-icon">🔎</span><h4>Kurulumlar</h4><p>Yalnızca metin baseline kurulumu ile metin+metadata improved kurulumu ayrıştırılarak ek bilginin performansa etkisi raporlandı.</p></div>
+          </div>
+        </div>
+
+        <div class="modal-summary" style="padding-top: 24px;">
+          <h3 class="modal-section-title">Sonuçlar</h3>
+          <div class="modal-summary-grid">
+            <div class="modal-summary-card"><span class="s-icon">🏆</span><h4>BERT/RoBERTa</h4><p>İkili görevde en yüksek başarı elde edildi: 0.8063 accuracy ve 0.8017 Macro-F1.</p></div>
+            <div class="modal-summary-card"><span class="s-icon">📉</span><h4>Sınıf Zorluğu</h4><p>Sınıf sayısı arttıkça tüm modellerin başarısı düştü; ince doğruluk derecelerini ayırmak temel güçlük olarak öne çıktı.</p></div>
+            <div class="modal-summary-card"><span class="s-icon">➕</span><h4>Metadata Etkisi</h4><p>Metne konuşmacı geçmişi gibi üst veriler eklendiğinde ve yeniden örnekleme uygulandığında modellerde tutarlı iyileşme gözlemlendi.</p></div>
+            <div class="modal-summary-card"><span class="s-icon">🔭</span><h4>Gelecek Çalışma</h4><p>LLaMA/Mistral gibi büyük dil modellerinin ince ayarı ve doğrudan etiketli hukuki veri kümeleriyle eğitim hedeflenmektedir.</p></div>
+          </div>
+        </div>
+
+        <div class="modal-image-section">
+          <h3 class="modal-section-title">Model Başarı Karşılaştırması</h3>
+          <p class="modal-image-caption">İkili, üçlü ve altılı sınıflandırma görevlerinde modellerin doğruluk performansı karşılaştırıldı; BERT/RoBERTa ikili görevde en yüksek sonucu verdi.</p>
+          <div class="modal-full-image">
+            <img src="assets/nlp/Ekran Resmi 2026-06-21 01.57.29.png" alt="NLP modellerinin ikili, üçlü ve altılı doğruluk karşılaştırması" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="modal-image-section">
+          <h3 class="modal-section-title">Model Matrisleri</h3>
+          <p class="modal-image-caption">Her model ailesi için ikili, üç sınıflı ve altı sınıflı senaryolardaki karışıklık matrisleri ayrı ayrı incelendi.</p>
+          <div class="modal-matrix-tabs">
+            <button class="matrix-tab nlp-matrix-tab active" onclick="showNlpMatrix('bert')">BERT/RoBERTa</button>
+            <button class="matrix-tab nlp-matrix-tab" onclick="showNlpMatrix('svm')">SVM</button>
+            <button class="matrix-tab nlp-matrix-tab" onclick="showNlpMatrix('bilstm')">BiLSTM</button>
+            <button class="matrix-tab nlp-matrix-tab" onclick="showNlpMatrix('xgb-sbert')">XGBoost SBERT</button>
+            <button class="matrix-tab nlp-matrix-tab" onclick="showNlpMatrix('xgb-tfidf')">XGBoost TF-IDF</button>
+          </div>
+          <div class="modal-matrix-panel nlp-matrix-panel active" id="nlp-matrix-bert">
+            <img src="assets/nlp/Ekran Resmi 2026-06-24 21.30.06.png" alt="BERT/RoBERTa improved confusion matrices" loading="lazy" />
+          </div>
+          <div class="modal-matrix-panel nlp-matrix-panel" id="nlp-matrix-svm">
+            <img src="assets/nlp/Ekran Resmi 2026-06-24 21.26.30.png" alt="SVM TF-IDF improved confusion matrices" loading="lazy" />
+          </div>
+          <div class="modal-matrix-panel nlp-matrix-panel" id="nlp-matrix-bilstm">
+            <img src="assets/nlp/Ekran Resmi 2026-06-24 21.30.27.png" alt="BiLSTM improved confusion matrices" loading="lazy" />
+          </div>
+          <div class="modal-matrix-panel nlp-matrix-panel" id="nlp-matrix-xgb-sbert">
+            <img src="assets/nlp/Ekran Resmi 2026-06-24 21.30.43.png" alt="XGBoost SBERT improved confusion matrices" loading="lazy" />
+          </div>
+          <div class="modal-matrix-panel nlp-matrix-panel" id="nlp-matrix-xgb-tfidf">
+            <img src="assets/nlp/Ekran Resmi 2026-06-24 21.30.52.png" alt="XGBoost TF-IDF character improved confusion matrices" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </div>
+
   </body>
 </html>
